@@ -19,8 +19,12 @@ from django.urls import path
 from task2.views import func_template, class_template
 from django.views.generic import TemplateView
 
+from task3.views import platform, games, cart
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', func_template),
-    path('class/', class_template.as_view()),
+    path('', platform),
+    path('func/', func_template),
+    path('games/', games),
+    path('cart/', cart.as_view()),
 ]

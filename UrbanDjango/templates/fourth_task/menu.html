@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+<header>
+    {% block pagename %}
+    <h1>Главная страница</h1>
+    {% endblock %}
+</header>
+{% block menu %}
+<nav>
+    <ul>
+        <li><a href="#">Главная</a></li>
+        <li><a href="/games">Магазин</a></li>
+        <li><a href="/cart">Корзина</a></li>
+    </ul>
+</nav>
+{% endblock %}
+{% block content %}
+{% endblock %}
+</body>
+</html>
